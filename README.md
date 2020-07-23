@@ -1,5 +1,5 @@
 
-# React-GoodReads-MyShelf
+# React-GoodReads-Simple
 This project is a React-based component to render your own book shelf. 
 It was built using create-react-app.
 
