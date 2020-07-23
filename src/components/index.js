@@ -7,10 +7,10 @@ function BookShelf(props) {
     "https://www.goodreads.com/review/list/" +
     process.env.REACT_APP_GOODREADS_USER_ID;
   return (
-    <>
+    <React.Fragment>
       <Container>
-        <h6>
-          Go to my <a href={myshelf_url}>GoodReads.com book shelf</a> for more.
+        <h6 className="pb-3">
+          Go to my <a href={myshelf_url}>GoodReads.com bookshelf</a> for more.
         </h6>
         <GoodreadsWrapper
           apikey={props.apikey}
@@ -21,7 +21,7 @@ function BookShelf(props) {
           sort={props.sort}
         />
       </Container>
-    </>
+    </React.Fragment>
   );
 }
 

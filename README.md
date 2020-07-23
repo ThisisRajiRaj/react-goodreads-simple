@@ -8,11 +8,14 @@ It was built using create-react-app.
 
 ```jsx
 import React from 'react';
-import { Bookshelf } from 'react-goodreads-myshelf';
+import BookShelf from "react-goodreads-simple"
 
 export default function App() {
 	return (
-		<Bookshelf userid="USER_ID_HERE" apikey="API_KEY_HERE" />
+		<BookShelf
+          apikey="YOUR_GOODREADS_API_KEY"
+          userid="YOUR_GOODREADS_API_KEY"
+        />
 	);
 }
 ```

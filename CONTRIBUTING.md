@@ -39,20 +39,15 @@ Having done that, here is how to run the application locally in development mode
 
     npm install
 
-**Starting the application in development mode:**
-    Uncomment lines in index.js to render the bookshelf on a browser.
+**Starting the application in development mode:**    
     npm start
 
 # Building the application:
 
 To build the production assets, run
-
     npm run build
 
-# Testing the App:
-
-Right now there is only one test suite. (renders without crashing)
-
-    npm test
+# Testing the App:    
+    npm run test
 
 _Many thanks to [h5bp](https://raw.githubusercontent.com/facebook/create-react-app/master/CONTRIBUTING.md) for the inspiration with this contributing guide_

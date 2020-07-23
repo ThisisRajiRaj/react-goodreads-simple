@@ -1,7 +1,14 @@
 {
   "name": "react-goodreads-simple",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "private": false,
+  "files": [
+    "dist/index.js",
+    "dist/GoodreadsBook.js",
+    "dist/GoodreadsBookList.js",
+    "dist/GoodreadsWrapper.js"
+  ],  
+  "repository": "https://github.com/ThisisRajiRaj/react-goodreads-simple",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "babel": {
@@ -26,7 +33,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",    
+    "publish:build": "SET NODE_ENV=production && rm -rf dist && mkdir dist && npx babel src/components --out-dir dist --copy-files"
   },
   "eslintConfig": {
     "extends": "react-app"
