@@ -15,7 +15,9 @@ class GoodreadsBook extends Component {
   }
 
   render() {
-    if (!this.state.title) return <></>;
+    if (!this.state.title) {
+      return (<React.Fragment></React.Fragment>);
+    }
     return (
       <OverlayTrigger
         placement="bottom"

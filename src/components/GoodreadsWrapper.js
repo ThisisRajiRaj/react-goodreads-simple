@@ -49,11 +49,11 @@ class GoodreadsWrapper extends Component {
 
     var raw = {
       id: props.userid,
-      shelf: props.shelf ?? "read",
+      shelf: (props.shelf === undefined) ? "read" : props.shelf,
       key: props.apikey,
-      per_page: props.per_page ?? 10,
-      page: props.page ?? 1,
-      sort: props.sort ?? "date_read",
+      per_page: (props.per_page === undefined) ? 10 : props.per_page,
+      page: (props.page === undefined) ? 1 : props.page,
+      sort: (props.sort === undefined) ? "date_read" : props.sort,
       v: "2",
     };
     var queryString = Object.keys(raw)
@@ -76,9 +76,9 @@ class GoodreadsWrapper extends Component {
     }
     if (this.state.error) return <p>{this.state.error}</p>;
     return (
-      <>
+      <React.Fragment>
         <GoodreadsBookList xml={this.state.shelfContent}></GoodreadsBookList>
-      </>
+      </React.Fragment>
     );
   }
 }

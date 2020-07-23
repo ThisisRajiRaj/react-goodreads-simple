@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { Container, Row } from "react-bootstrap";
-import GoodreadsBook from "./GoodreadBook";
+import GoodreadsBook from "./GoodreadsBook";
 
 class GoodreadsBookList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      bookListElements: props.bookListElements ?? [],
+      bookListElements:
+        props.bookListElements === undefined ? [] : props.bookListElements,
     };
   }
 
