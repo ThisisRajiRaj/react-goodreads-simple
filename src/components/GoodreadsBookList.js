@@ -45,7 +45,13 @@ class GoodreadsBookList extends Component {
       const link = eachReview.getElementsByTagName("link")[0].innerHTML;
 
       const reviewItem = (
-        <GoodreadsBook id={id} image={imageURL} title={title} link={link} />
+        <GoodreadsBook
+          key={id}
+          id={id}
+          image={imageURL}
+          title={title}
+          link={link}
+        />
       );
       list[`review${id}`] = reviewItem;
     }

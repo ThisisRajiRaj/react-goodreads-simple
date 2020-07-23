@@ -47,13 +47,23 @@ class GoodreadsWrapper extends Component {
     myHeaders.append("Content-Type", "text/plain");
     myHeaders.append("X-Requested-With", "XMLHttpRequest");
 
+    // This is clearly hacky, but goodreads seems to not honor my
+    // # of records to return otherwise on mobile. So faking
+    // the user-agent to appear like request is coming from a PC.
+    myHeaders.append(
+      "User-Agent",
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " +
+        "AppleWebKit/537.36 (KHTML, like Gecko) " +
+        "Chrome/74.0.3729.169 Safari/537.36"
+    );
+
     var raw = {
       id: props.userid,
-      shelf: (props.shelf === undefined) ? "read" : props.shelf,
+      shelf: props.shelf === undefined ? "read" : props.shelf,
       key: props.apikey,
-      per_page: (props.per_page === undefined) ? 10 : props.per_page,
-      page: (props.page === undefined) ? 1 : props.page,
-      sort: (props.sort === undefined) ? "date_read" : props.sort,
+      per_page: props.per_page === undefined ? 10 : props.per_page,
+      page: props.page === undefined ? 1 : props.page,
+      sort: props.sort === undefined ? "date_read" : props.sort,
       v: "2",
     };
     var queryString = Object.keys(raw)
