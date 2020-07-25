@@ -1,13 +1,13 @@
 {
   "name": "react-goodreads-simple",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": false,
   "files": [
     "dist/index.js",
     "dist/GoodreadsBook.js",
     "dist/GoodreadsBookList.js",
     "dist/GoodreadsWrapper.js"
-  ],  
+  ],
   "main": "dist/index.js",
   "module": "dist/index.js",
   "babel": {
@@ -32,7 +32,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",    
+    "eject": "react-scripts eject",
     "publish:build": "SET NODE_ENV=production && rm -rf dist && mkdir dist && npx babel src/components --out-dir dist --copy-files"
   },
   "eslintConfig": {
@@ -51,10 +51,13 @@
     ]
   },
   "author": "Raji Rajagopalan",
-  "description": "A component to render a user's Goodreads shelf.",  
+  "description": "A component to render a user's Goodreads shelf.",
   "repository": "https://github.com/ThisisRajiRaj/react-goodreads-simple",
-  "homepage": "https://github.com/ThisisRajiRaj/react-goodreads-simple#readme",
-  "keywords":["bookshelf","goodreads","books"],
+  "keywords": [
+    "bookshelf",
+    "goodreads",
+    "books"
+  ],
   "license": "MIT License",
   "devDependencies": {
     "babel-cli": "^6.26.0",
