@@ -71,10 +71,9 @@ class GoodreadsWrapper extends Component {
       .join("&");
 
     const url =
-      "https://www.goodreads.com/review/list?" +
+      "https://thingproxy.freeboard.io/fetch/https://www.goodreads.com/review/list?" +
       queryString;
-
-    return fetch(url, { mode:'no-cors', headers: myHeaders })
+    return fetch(url, { headers: myHeaders })
       .then((response) => response.text())
       .then((data) => data)
       .catch((error) => error);

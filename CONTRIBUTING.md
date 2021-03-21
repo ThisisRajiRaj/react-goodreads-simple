@@ -47,6 +47,11 @@ To build the production assets, run
 
     npm run test
 
+**Publishing to NPM:**  
+Change version number in package.json
+    npm login
+    npm publish
+
 ## Contributing
 
 When contributing to this repository, please first discuss the change you wish to make via issue,

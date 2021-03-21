@@ -1,6 +1,6 @@
 {
   "name": "react-goodreads-simple",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "private": false,
   "files": [
     "dist/index.js",
