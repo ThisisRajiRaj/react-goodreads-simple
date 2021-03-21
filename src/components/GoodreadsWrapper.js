@@ -71,10 +71,10 @@ class GoodreadsWrapper extends Component {
       .join("&");
 
     const url =
-      "https://cors-anywhere.herokuapp.com/https://www.goodreads.com/review/list?" +
+      "https://www.goodreads.com/review/list?" +
       queryString;
 
-    return fetch(url, { headers: myHeaders })
+    return fetch(url, { mode:'no-cors', headers: myHeaders })
       .then((response) => response.text())
       .then((data) => data)
       .catch((error) => error);
