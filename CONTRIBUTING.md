@@ -50,6 +50,7 @@ To build the production assets, run
 **Publishing to NPM:**  
 Change version number in package.json
     npm login
+    npm run publish:build
     npm publish
 
 ## Contributing
