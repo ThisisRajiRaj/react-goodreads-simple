@@ -3,7 +3,7 @@
 Thank you for considering to contribute! Here are some rules of thumb as you go about it.
 
 ## Folder Structure
-react-goodreads-myshelf is based on ReactJS and was created with create-react-app template.
+react-goodreads-simple is based on ReactJS and was created with create-react-app template.
 
 It has the following structure under root.
 
