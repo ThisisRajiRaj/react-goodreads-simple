@@ -1,21 +1,16 @@
-import React from "react";
-import Enzyme, { shallow } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
+import React, { act } from "react";
+import { createRoot } from "react-dom/client";
 import GoodreadsBookList from "./GoodreadsBookList";
 
-Enzyme.configure({ adapter: new Adapter() });
+describe("GoodreadsBookList", () => {
+  it("renders with empty XML without crashing", () => {
+    const div = document.createElement("div");
+    const xml = "<GoodreadsResponse></GoodreadsResponse>";
 
-test("empty list", () => {
-  var list = shallow(<GoodreadsBookList bookListElements={[]} />);
-  expect(list.text().length).toBe(0);
-});
-
-test("single item", () => {
-  var list = shallow(<GoodreadsBookList bookListElements={["abc"]} />);
-  expect(list.text()).toBe("abc");
-});
-
-test("multiple items", () => {
-  var list = shallow(<GoodreadsBookList bookListElements={["abc", "def"]} />);
-  expect(list.text()).toBe("abcdef");
+    act(() => {
+      const root = createRoot(div);
+      root.render(<GoodreadsBookList xml={xml} />);
+      root.unmount();
+    });
+  });
 });

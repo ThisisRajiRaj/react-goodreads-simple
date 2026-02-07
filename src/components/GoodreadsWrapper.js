@@ -70,9 +70,11 @@ class GoodreadsWrapper extends Component {
       .map((key) => key + "=" + raw[key])
       .join("&");
 
-    const url =
-      "https://thingproxy.freeboard.io/fetch/https://www.goodreads.com/review/list?" +
-      queryString;
+    const baseUrl = props.proxy
+      ? props.proxy.replace(/\/$/, "")
+      : "";
+    const url = baseUrl + "/review/list?" + queryString;
+
     return fetch(url, { headers: myHeaders })
       .then((response) => response.text())
       .then((data) => data)
